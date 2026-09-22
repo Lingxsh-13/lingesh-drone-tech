@@ -1,0 +1,1880 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LINGESH DRONE TECH | Drone Creator</title>
+
+<meta name="description"
+content="LINGESH DRONE TECH - Drone photography, cinematography and creative aerial content by Lingesh from Dindigul, Tamil Nadu.">
+.hero-title {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hero-title h1 {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero-title p {
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+<style>
+.hero-title h1 {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero-title p {
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#061313;
+    color:white;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(6,19,19,.9);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-container{
+    max-width:1250px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#25e6b5;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#d5e4e2;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#25e6b5;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:120px 25px 70px;
+    background:
+    radial-gradient(circle at 80% 30%,rgba(37,230,181,.15),transparent 30%),
+    radial-gradient(circle at 20% 80%,rgba(0,180,255,.10),transparent 30%),
+    #061313;
+}
+
+.hero-container{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+.tag{
+    display:inline-block;
+    color:#25e6b5;
+    border:1px solid rgba(37,230,181,.4);
+    padding:7px 14px;
+    border-radius:50px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(45px,7vw,82px);
+    line-height:.95;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#25e6b5;
+}
+
+.hero p{
+    color:#a8bab8;
+    max-width:600px;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:13px 23px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+    display:inline-block;
+}
+
+.btn-primary{
+    background:#25e6b5;
+    color:#03100e;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(37,230,181,.2);
+}
+
+.btn-outline{
+    border:1px solid #31504d;
+    color:white;
+}
+
+.btn-outline:hover{
+    border-color:#25e6b5;
+    color:#25e6b5;
+}
+
+/* HERO DRONE */
+
+.drone-box{
+    height:430px;
+    border-radius:30px;
+    border:1px solid rgba(37,230,181,.2);
+    background:
+    radial-gradient(circle,rgba(37,230,181,.12),transparent 50%),
+    rgba(255,255,255,.025);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.drone-icon{
+    font-size:150px;
+    animation:float 4s ease-in-out infinite;
+    filter:drop-shadow(0 0 30px rgba(37,230,181,.35));
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-18px)}
+}
+
+.circle{
+    position:absolute;
+    border:1px solid rgba(37,230,181,.15);
+    border-radius:50%;
+}
+
+.circle.one{
+    width:260px;
+    height:260px;
+}
+
+.circle.two{
+    width:360px;
+    height:360px;
+}
+
+/* COMMON */
+
+section{
+    padding:100px 25px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title small{
+    color:#25e6b5;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-top:10px;
+}
+
+.section-title p{
+    color:#91a5a2;
+    max-width:700px;
+    margin:15px auto 0;
+}
+
+/* ABOUT */
+
+.about{
+    background:#081919;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-text h3{
+    font-size:32px;
+    margin-bottom:18px;
+}
+
+.about-text h3 span{
+    color:#25e6b5;
+}
+
+.about-text p{
+    color:#9db0ad;
+    margin-bottom:18px;
+}
+
+.info-card{
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.025);
+}
+
+.info-row{
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.info-row:last-child{
+    border-bottom:none;
+}
+
+.info-row strong{
+    display:block;
+    color:#25e6b5;
+    margin-bottom:5px;
+}
+
+/* DRONES */
+
+.drones{
+    background:#081919;
+}
+
+.drone-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.drone-card,
+.card{
+    background:#0c2020;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.07);
+    transition:.3s;
+}
+
+.drone-card:hover,
+.card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(37,230,181,.4);
+}
+
+.drone-photo{
+    height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+    radial-gradient(circle,rgba(37,230,181,.14),transparent 60%),
+    #071515;
+    font-size:70px;
+}
+
+.drone-info{
+    padding:22px;
+}
+
+.drone-info h3{
+    margin-bottom:8px;
+}
+
+.drone-info p{
+    color:#91a5a2;
+    font-size:14px;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+    text-align:center;
+}
+
+.coming-soon{
+    max-width:800px;
+    margin:auto;
+    padding:60px 30px;
+    border:1px solid rgba(37,230,181,.2);
+    border-radius:25px;
+    background:linear-gradient(
+        135deg,
+        rgba(37,230,181,.08),
+        rgba(255,255,255,.02)
+    );
+}
+
+.coming-soon h3{
+    font-size:32px;
+    color:#25e6b5;
+    margin-bottom:15px;
+}
+
+.coming-soon p{
+    color:#91a5a2;
+}
+
+/* GALLERY */
+
+.gallery{
+    background:#081919;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.gallery-item{
+    height:220px;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
+    background:
+    linear-gradient(135deg,#0b2422,#102d2a);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#25e6b5;
+    font-size:18px;
+    text-align:center;
+    transition:.3s;
+}
+
+.gallery-item:hover{
+    transform:scale(1.03);
+}
+
+/* VIDEOS */
+
+.video-box{
+    max-width:850px;
+    margin:auto;
+    padding:50px 30px;
+    border-radius:25px;
+    text-align:center;
+    border:1px solid rgba(37,230,181,.2);
+    background:#0a1c1c;
+}
+
+.video-box .play{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.video-box p{
+    color:#91a5a2;
+    margin-bottom:25px;
+}
+
+/* JOURNEY */
+
+.journey{
+    background:#081919;
+}
+
+.timeline{
+    max-width:850px;
+    margin:auto;
+    border-left:2px solid #25e6b5;
+    padding-left:30px;
+}
+
+.timeline-item{
+    margin-bottom:35px;
+    position:relative;
+}
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    width:12px;
+    height:12px;
+    background:#25e6b5;
+    border-radius:50%;
+    left:-37px;
+    top:7px;
+}
+
+.timeline-item h3{
+    color:#25e6b5;
+    margin-bottom:5px;
+}
+
+.timeline-item p{
+    color:#91a5a2;
+}
+
+/* KNOWLEDGE */
+
+.knowledge-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.card{
+    padding:25px;
+}
+
+.card-icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#91a5a2;
+    font-size:14px;
+}
+
+/* DGCA */
+
+.dgca{
+    background:#081919;
+}
+
+.dgca-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.dgca-card{
+    padding:28px;
+    border-radius:18px;
+    background:#0c2020;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.dgca-card h3{
+    color:#25e6b5;
+    margin-bottom:10px;
+}
+
+.dgca-card p{
+    color:#91a5a2;
+    font-size:14px;
+}
+
+/* UPDATES */
+
+.updates{
+    text-align:center;
+}
+
+.update-box{
+    max-width:850px;
+    margin:auto;
+    padding:40px;
+    border-radius:20px;
+    background:#0b2020;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.update-box h3{
+    color:#25e6b5;
+    margin-bottom:10px;
+}
+
+.update-box p{
+    color:#91a5a2;
+}
+
+/* FAQ */
+
+.faq{
+    background:#081919;
+}
+
+.faq-grid{
+    max-width:900px;
+    margin:auto;
+}
+
+details{
+    background:#0c2020;
+    margin-bottom:12px;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#25e6b5;
+}
+
+details p{
+    color:#91a5a2;
+    margin-top:12px;
+}
+
+/* CONTACT */
+
+.contact-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:60px 30px;
+    border-radius:25px;
+    border:1px solid rgba(37,230,181,.2);
+    background:
+    radial-gradient(circle at center,rgba(37,230,181,.08),transparent 65%),
+    #0a1c1c;
+}
+
+.contact-box h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#95aaa6;
+    margin-bottom:30px;
+}
+
+.contact-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid rgba(255,255,255,.07);
+    padding:30px 25px;
+    text-align:center;
+    color:#728582;
+}
+
+footer strong{
+    color:#25e6b5;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero-container,
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .drone-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .knowledge-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .dgca-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .drone-grid,
+    .gallery-grid,
+    .knowledge-grid,
+    .dgca-grid{
+        grid-template-columns:1fr;
+    }
+
+    .drone-box{
+        height:280px;
+    }
+
+    .contact-box h2{
+        font-size:32px;
+    }
+}
+.gallery-item {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+</style>
+</head>
+
+<body>
+<div style="text-align:center; padding-top:120px;">
+    <h1 style="margin:0;">LINGESH DRONE TECH</h1>
+    <p style="margin-top:20px;">Drone Photography • Cinematography • Aerial Creativity</p>
+</div>
+<!-- NAVBAR -->
+
+<nav>
+<div class="nav-container">
+
+<a href="#home" class="logo">
+✦ <span>LINGESH</span> DRONE TECH
+</a>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#drones">Drones</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#knowledge">Knowledge</a></li>
+<li><a href="#dgca">DGCA</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+<div>
+
+<span class="tag">DRONE CREATOR • DINDIGUL</span>
+
+<h1>
+Capture the
+<span>World</span>
+From Above.
+</h1>
+
+<p>
+Hi, I'm Lingesh — an intermediate-level drone enthusiast from
+Dindigul, Tamil Nadu. I explore aerial photography,
+cinematography, travel visuals, nature and drone technology.
+</p>
+
+<div class="buttons">
+
+<a href="#drones" class="btn btn-primary">
+Explore My Drones
+</a>
+
+<a href="#portfolio" class="btn btn-outline">
+View My Work
+</a>
+
+</div>
+
+</div>
+
+
+<div class="drone-box">
+
+<div class="circle one"></div>
+<div class="circle two"></div>
+
+<div class="drone-icon">🚁</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>ABOUT ME</small>
+
+<h2>Meet Lingesh</h2>
+
+<p>
+    Passionate Drone Enthusiast • Perfect Drone Handler • Aerial Creator
+</p>
+</div>
+
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<img src="profile.jpg"
+     alt="Lingesh"
+     style="width:180px;height:180px;object-fit:cover;border-radius:50%;display:block;margin-bottom:25px;border:3px solid #25e6b5;">
+
+<h3>
+Technology meets <span>Creativity.</span>
+</h3>
+
+<p>
+    I'm <strong>Lingesh</strong> from Subramaniyapuram, Trichy – 620020.
+    I'm pursuing <strong>B.E. (AI & ML)</strong> at
+    <strong>Jamal Mohamed College of Engineering, Vadamadurai, Dindigul – 624802.</strong>
+</p>
+
+<p>
+I'm passionate about drones, aerial photography,
+cinematography, travel visuals, nature and creative
+content creation.
+</p>
+
+<p>
+    <strong>Perfect Drone Handler</strong> with hands-on experience
+    in drone flying, aerial photography and cinematic videography.
+</p>
+
+<p>
+My goal is to combine <strong>technology + creativity</strong>
+to create unique aerial content.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-row">
+<strong>Name</strong>
+<span>Lingesh</span>
+</div>
+
+<div class="info-row">
+<strong>Location</strong>
+<span>Dindigul, Tamil Nadu</span>
+</div>
+
+<div class="info-row">
+<strong>Education</strong>
+<span>B.E. AI & Machine Learning</span>
+</div>
+
+<div class="info-row">
+<strong>College</strong>
+<span>Jamal Mohamed College of Engineering</span>
+</div>
+
+<div class="info-row">
+<strong>Experience</strong>
+<span>Intermediate</span>
+</div>
+
+<div class="info-row">
+<strong>Interests</strong>
+<span>Photography • Cinematography • Travel • Nature • Reels • Drone Technology</span>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- DRONES -->
+
+<section class="drones" id="drones">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>MY GEAR</small>
+
+<h2>My Drone Collection</h2>
+
+<p>
+My current drone collection and the equipment I use to explore aerial content.
+</p>
+
+</div>
+
+
+<div class="drone-grid">
+
+
+<div class="drone-card">
+
+<div class="drone-photo">
+    <img src="mini3.jpg" alt="DJI Mini 3"
+         style="width:100%;height:200px;object-fit:contain;">
+</div>
+
+<div class="drone-info">
+
+<h3>DJI Mini 3</h3>
+
+<p>
+Compact drone for aerial photography,
+travel content and creative flying.
+</p>
+
+<br>
+
+<a href="#" class="btn btn-outline">View Details</a>
+
+</div>
+</div>
+
+
+<div class="drone-card">
+
+<div class="drone-photo">
+    <img src="avata.jpg" alt="DJI Avata 360"
+         style="width:100%;height:200px;object-fit:contain;">
+</div>
+
+<div class="drone-info">
+
+<h3>DJI Avata 360</h3>
+
+<p>
+Part of my drone collection for exploring
+immersive aerial content.
+</p>
+
+<br>
+
+<a href="#" class="btn btn-outline">View Details</a>
+
+</div>
+</div>
+
+
+<div class="drone-card">
+
+<div class="drone-photo">
+    <img src="neo2.jpg" alt="DJI Neo 2"
+         style="width:100%;height:200px;object-fit:contain;">
+</div>
+
+<div class="drone-info">
+
+<h3>DJI Neo 2</h3>
+
+<p>
+Compact drone platform for creative
+aerial photography and videos.
+</p>
+
+<br>
+
+<a href="#" class="btn btn-outline">View Details</a>
+
+</div>
+</div>
+
+
+<div class="drone-card">
+
+<div class="drone-photo">
+    <img src="litox1.jpg" alt="DJI Litox1"
+         style="width:100%;height:200px;object-fit:contain;">
+</div>
+
+<div class="drone-info">
+
+<h3>DJI Litox1</h3>
+
+<p>
+One of the drones in my collection
+for aerial exploration.
+</p>
+
+<br>
+
+<a href="#" class="btn btn-outline">View Details</a>
+
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>MY WORK</small>
+
+<h2>Portfolio</h2>
+
+<p>
+A collection of my aerial photography, cinematography
+and creative drone projects.
+</p>
+
+</div>
+
+<div class="portfolio-grid">
+
+    <div class="portfolio-card">
+        <img src="nature.jpg" alt="Aerial Nature Photography">
+        <h3>🌿 Aerial Nature</h3>
+        <p>Aerial photography capturing natural landscapes and scenic views.</p>
+    </div>
+
+    <div class="portfolio-card">
+        <img src="travel.jpg" alt="Aerial Travel Photography">
+        <h3>✈️ Travel Aerials</h3>
+        <p>Drone photography and videos from travel locations.</p>
+    </div>
+
+    <div class="portfolio-card">
+        <img src="temple.jpg" alt="Aerial Temple Photography">
+        <h3>🛕 Temple Aerials</h3>
+        <p>Aerial views showcasing architecture and surroundings.</p>
+    </div>
+
+    <div class="portfolio-card">
+        <img src="building.jpg" alt="Aerial Building Photography">
+        <h3>🏢 Architecture</h3>
+        <p>Aerial photography focused on buildings and structures.</p>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>VISUALS</small>
+
+<h2>Drone Gallery</h2>
+
+<p>
+A space for my future drone photographs and aerial visuals.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+    <div class="gallery-item">
+        <img src="nature.jpg" alt="Nature">
+       
+    </div>
+
+    <div class="gallery-item">
+        <img src="travel.jpg" alt="Travel">
+      
+    </div>
+
+    <div class="gallery-item">
+        <img src="temple.jpg" alt="Temple">
+        
+    </div>
+
+    <div class="gallery-item">
+        <img src="building.jpg" alt="Building">
+        
+    </div>
+
+    <div class="gallery-item">
+        🚁
+        <span>Drone Shots</span>
+    </div>
+
+    <div class="gallery-item">
+        💍
+        <span>Events</span>
+    </div>
+
+    <div class="gallery-item">
+        🎥
+        <span>Cinematic</span>
+    </div>
+
+    <div class="gallery-item">
+        📸
+        <span>Aerial Photography</span>
+    </div>
+
+</div>
+</section>
+
+
+<!-- VIDEO -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<small>WATCH</small>
+
+<h2>Videos & Reels</h2>
+
+
+<p>
+My aerial videos and Instagram Reels will be showcased here.
+</p>
+
+</div>
+
+
+<div class="video-box">
+
+<div class="play">▶️</div>
+
+<h3>Instagram Reels</h3>
+
+<p>
+Follow my Instagram to watch my latest drone content,
+aerial experiments and creative videos.
+</p>
+<a href="https://www.instagram.com/lingxsh.13?stkn=d291d2R6ZHo2Z2tp"
+   target="_blank"
+   rel="noopener noreferrer"
+   style="display:inline-block;
+          margin-top:20px;
+          padding:14px 28px;
+          background:#25e6b5;
+          color:#061515;
+          text-decoration:none;
+          border-radius:10px;
+          font-weight:bold;
+          font-size:16px;
+          box-shadow:0 0 18px rgba(37,230,181,0.35);">
+    📸 Visit My Instagram
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- JOURNEY -->
+
+<section class="journey">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>MY STORY</small>
+
+<h2>My Drone Journey</h2>
+
+<p>
+Learning, experimenting and growing with every flight.
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>Started</h3>
+
+<p>
+Started exploring the world of drones and aerial technology.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>Learning to Fly</h3>
+
+<p>
+Developed flying skills through practice and experimentation.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>Photography</h3>
+
+<p>
+Started exploring aerial photography and unique perspectives.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>Cinematography</h3>
+
+<p>
+Learning cinematic movements, framing and creative aerial videos.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<h3>Future Goals</h3>
+
+<p>
+Continue improving my skills and create more professional
+aerial content.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- DRONE KNOWLEDGE -->
+
+<section id="knowledge">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>LEARN & EXPLORE</small>
+
+<h2>Drone Knowledge</h2>
+
+<p>
+Things I'm learning and exploring in the world of drone technology.
+</p>
+
+</div>
+
+
+<div class="knowledge-grid">
+
+<a href="drone-safety.html" class="card-link">
+
+<div class="card">
+<div class="card-icon">🛡️</div>
+<h3>Drone Safety</h3>
+<p>Basic safety practices and responsible drone flying.</p>
+</div>
+
+<a href="battery-care.html" class="card-link">
+
+<div class="card">
+<div class="card-icon">🔋</div>
+<h3>Battery Care</h3>
+<p>Understanding battery handling, charging and storage.</p>
+</div>
+
+<a href="maintenance.html" class="card-link">
+
+    <div class="card">
+        <div class="card-icon">🔧</div>
+        <h3>Maintenance</h3>
+        <p>Learning basic drone maintenance and equipment care.</p>
+    </div>
+
+</a>
+
+
+<a href="rth-satellites.html" class="card-link">
+
+    <div class="card">
+        <div class="card-icon">🛰️</div>
+        <h3>RTH & Satellites</h3>
+        <p>Understanding Return To Home and satellite positioning.</p>
+    </div>
+
+<a href="photography-tips.html" class="card-link">
+
+    <div class="card">
+        <div class="card-icon">📸</div>
+        <h3>Photography Tips</h3>
+        <p>Exploring composition, framing and aerial photography.</p>
+    </div>
+
+<a href="cinematography.html" class="card-link">
+
+    <div class="card">
+        <div class="card-icon">🎥</div>
+        <h3>Cinematography</h3>
+        <p>Learning smooth movements and cinematic aerial shots.</p>
+    </div>
+
+<a href="weather-wind.html" class="card-link">
+
+    <div class="card">
+        <div class="card-icon">🌬️</div>
+        <h3>Weather & Wind</h3>
+        <p>Understanding environmental conditions before flying.</p>
+    </div>
+
+<a href="flying-tips.html" class="card-link">
+
+    <div class="card">
+        <div class="card-icon">🚁</div>
+        <h3>Flying Tips</h3>
+        <p>Practicing controlled and creative drone movements.</p>
+    </div>
+
+<a href="flying-zones.html" class="card-link">
+
+    <div class="card">
+        <div class="card-icon">🗺️</div>
+        <h3>Flying Zones</h3>
+        <p>Learning about permitted and restricted flying areas.</p>
+    </div>
+
+</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- DGCA -->
+
+<section class="dgca" id="dgca">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>DRONE REGULATIONS</small>
+
+<h2>DGCA & Registration</h2>
+<a href="https://www.dgca.gov.in/digigov-portal/"
+   target="_blank"
+   rel="noopener noreferrer"
+   style="display:inline-block;
+          margin-top:20px;
+          padding:12px 24px;
+          background:#25e6b5;
+          color:#061515;
+          text-decoration:none;
+          border-radius:8px;
+          font-weight:bold;">
+    Visit DGCA Official Website
+</a>
+
+<p>
+Important topics related to drone registration, flying and regulations in India.
+</p>
+
+</div>
+
+
+<div class="dgca-grid">
+
+<div class="dgca-card">
+<h3>📝 Drone Registration</h3>
+<p>
+Information about the process and requirements
+for registering drones in India.
+<a href="https://www.dgca.gov.in/digigov-portal/jsp/dgca/common/login.jsp"
+   target="_blank"
+   rel="noopener noreferrer"
+   style="display:inline-block;
+          margin-top:20px;
+          padding:14px 28px;
+          background:#25e6b5;
+          color:#061515;
+          text-decoration:none;
+          border-radius:10px;
+          font-weight:bold;
+          font-size:16px;
+          box-shadow:0 0 18px rgba(37,230,181,0.35);">
+    🚁 Drone Registration / eGCA
+</a>
+</p>
+</div>
+
+<div class="dgca-card">
+<h3>🎓 Remote Pilot Certificate</h3>
+<p>
+<a href="https://www.dgca.gov.in/digigov-portal/jsp/dgca/common/login.jsp"
+   target="_blank"
+   rel="noopener noreferrer"
+   style="display:inline-block;
+          margin-top:20px;
+          padding:14px 28px;
+          background:#25e6b5;
+          color:#061515;
+          text-decoration:none;
+          border-radius:10px;
+          font-weight:bold;
+          font-size:16px;
+          box-shadow:0 0 18px rgba(37,230,181,0.35);">
+    🧑‍✈️ Apply for Remote Pilot Certificate
+</a>
+Information about remote pilot requirements
+and certification.
+
+</p>
+</div>
+
+<div class="dgca-card">
+<h3>🗺️ Flying Zones</h3>
+<p>
+Learn about drone flying zones and restrictions
+before operating a drone.
+<div class="zone-grid">
+
+    <div class="zone-card">
+        🟢
+        <h3>Green Zone</h3>
+        <p>Drone flying is generally permitted within the applicable height limits and restrictions.</p>
+    </div>
+
+    <div class="zone-card">
+        🟡
+        <h3>Yellow Zone</h3>
+        <p>Restricted airspace. Prior permission from the concerned ATC authority is required.</p>
+    </div>
+
+    <div class="zone-card">
+        🔴
+        <h3>Red Zone</h3>
+        <p>Drone operations require permission from the Central Government.</p>
+    </div>
+
+</div>
+</p>
+</div>
+
+<div class="dgca-card">
+<h3>📜 Drone Rules</h3>
+<p>
+Learn about applicable drone rules and
+responsible operation.
+<div class="info-card">
+
+    <h3>🛸 Drone Rules – India</h3>
+
+    <ul>
+        <li>🇮🇳 Drone operations in India are regulated by the applicable DGCA rules.</li>
+        <li>👨‍✈️ Follow the applicable remote pilot training and certification requirements.</li>
+        <li>🗺️ Check the official DGCA airspace information before flying.</li>
+        <li>⚠️ Follow the current DGCA safety and operational requirements.</li>
+    </ul>
+
+    <h3 style="margin-top:30px;">⚖️ Drone Weight Categories</h3>
+
+    <ul>
+        <li>🟢 <strong>Nano:</strong> ≤ 250 grams</li>
+        <li>🔵 <strong>Micro:</strong> &gt; 250 grams to ≤ 2 kg</li>
+        <li>🟡 <strong>Small:</strong> &gt; 2 kg to ≤ 25 kg</li>
+        <li>🟠 <strong>Medium:</strong> &gt; 25 kg to ≤ 150 kg</li>
+        <li>🔴 <strong>Large:</strong> &gt; 150 kg</li>
+    </ul>
+
+    <a href="https://www.dgca.gov.in/digigov-portal/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="display:inline-block;
+              margin-top:20px;
+              padding:14px 28px;
+              background:#25e6b5;
+              color:#061515;
+              text-decoration:none;
+              border-radius:10px;
+              font-weight:bold;
+              font-size:16px;
+              box-shadow:0 0 18px rgba(37,230,181,0.35);">
+        📘 View Official DGCA Drone Rules
+    </a>
+
+</div>
+</p>
+</div>
+
+<div class="dgca-card">
+<h3>🛡️ Safety Guidelines</h3>
+<p>
+Basic safety practices for responsible
+drone operations.
+<a href="https://www.dgca.gov.in/digigov-portal/"
+   target="_blank"
+   rel="noopener noreferrer"
+   style="display:inline-block;
+          margin-top:20px;
+          padding:14px 28px;
+          background:#25e6b5;
+          color:#061515;
+          text-decoration:none;
+          border-radius:10px;
+          font-weight:bold;
+          font-size:16px;
+          box-shadow:0 0 18px rgba(37,230,181,0.35);">
+    🛡️ Safety Guidelines
+</a>
+</p>
+</div>
+
+<div class="dgca-card">
+<h3>🌐 Official Links</h3>
+<p>
+Official government and DGCA resources
+can be added here.
+<h3>🌐 Official Links</h3>
+
+<div style="display:flex; flex-direction:column; gap:15px; margin-top:20px;">
+
+    <a href="https://www.dgca.gov.in/digigov-portal/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="display:block;
+              padding:14px 20px;
+              background:#25e6b5;
+              color:#061515;
+              text-decoration:none;
+              border-radius:10px;
+              font-weight:bold;
+              font-size:16px;
+              box-shadow:0 0 18px rgba(37,230,181,0.35);">
+        🏛️ DGCA Official Website
+    </a>
+
+    <a href="https://www.dgca.gov.in/digigov-portal/jsp/dgca/common/login.jsp"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="display:block;
+              padding:14px 20px;
+              background:#25e6b5;
+              color:#061515;
+              text-decoration:none;
+              border-radius:10px;
+              font-weight:bold;
+              font-size:16px;
+              box-shadow:0 0 18px rgba(37,230,181,0.35);">
+        🔐 eGCA Portal
+    </a>
+
+    <a href="https://digitalsky.dgca.gov.in/home"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="display:block;
+              padding:14px 20px;
+              background:#25e6b5;
+              color:#061515;
+              text-decoration:none;
+              border-radius:10px;
+              font-weight:bold;
+              font-size:16px;
+              box-shadow:0 0 18px rgba(37,230,181,0.35);">
+        🛸 Digital Sky
+    </a>
+
+    <a href="https://digitalsky.dgca.gov.in/training-organizations"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="display:block;
+              padding:14px 20px;
+              background:#25e6b5;
+              color:#061515;
+              text-decoration:none;
+              border-radius:10px;
+              font-weight:bold;
+              font-size:16px;
+              box-shadow:0 0 18px rgba(37,230,181,0.35);">
+        👨‍✈️ Authorized Training Organizations
+    </a>
+
+</div>
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- UPDATES -->
+
+<section class="updates">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>STAY UPDATED</small>
+
+<h2>Drone Updates</h2>
+
+</div>
+
+
+<div class="update-box">
+
+<h3>🚁 <div class="info-card" style="margin-top:30px; padding:30px;">
+
+    <h2 style="font-size:28px; margin-bottom:20px;">
+        🔔 Drone Updates
+    </h2>
+
+    <p style="font-size:16px; line-height:1.8;">
+        Stay updated with the latest information related to drones,
+        regulations, registration, pilot certification and aviation
+        safety requirements in India.
+    </p>
+
+    <div style="margin-top:25px; line-height:2;">
+
+        <p>
+            📢 <strong>DGCA Rules & Regulations</strong><br>
+            Keep checking the latest DGCA rules, notifications,
+            circulars and regulatory updates before operating a drone.
+        </p>
+
+        <p>
+            🛸 <strong>Drone Registration</strong><br>
+            Check the latest requirements related to drone registration,
+            UIN and other applicable regulatory services.
+        </p>
+
+        <p>
+            🧑‍✈️ <strong>Remote Pilot Certificate</strong><br>
+            Stay informed about applicable training, examination and
+            Remote Pilot Certificate requirements.
+        </p>
+
+        <p>
+            🔐 <strong>eGCA Services</strong><br>
+            Follow the latest updates regarding online DGCA drone
+            services available through the eGCA platform.
+        </p>
+
+        <p>
+            🗺️ <strong>Airspace & Flight Information</strong><br>
+            Always check the latest official airspace information and
+            restrictions before every drone flight.
+        </p>
+
+        <p>
+            ⚠️ <strong>Safety Updates</strong><br>
+            Follow current safety instructions, operational
+            requirements and official aviation notices.
+        </p>
+
+    </div>
+
+    <a href="https://www.dgca.gov.in/digigov-portal/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="display:inline-block;
+              margin-top:25px;
+              padding:15px 32px;
+              background:#25e6b5;
+              color:#061515;
+              text-decoration:none;
+              border-radius:10px;
+              font-weight:bold;
+              font-size:17px;
+              box-shadow:0 0 20px rgba(37,230,181,0.35);">
+        🔔 Check Latest DGCA Updates
+    </a>
+
+</div></h3>
+
+<p>
+Future drone releases, technology updates,
+firmware news and interesting developments
+will be shared here.
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>FAQ</small>
+
+<h2>Frequently Asked Questions</h2>
+
+<p>
+Some common questions about me and my drone journey.
+</p>
+
+</div>
+
+
+<div class="faq-grid">
+
+<details>
+<summary>Who is Lingesh?</summary>
+<p>
+I’m Lingesh, a drone enthusiast and aerial content creator. I’m passionate about drones, aerial photography, cinematic shots and exploring new perspectives through drone technology.
+</p>
+</details>
+
+
+<details>
+<summary>What is your experience level?</summary>
+<p>
+I have hands-on experience with drone flying, aerial photography and cinematic video creation. I’m continuously learning and improving my flying, shooting and editing skills.
+</p>
+</details>
+
+
+<details>
+<summary>What drones do you own?</summary>
+<p>
+I currently work with DJI Mini 3, DJI Avata, DJI Neo 2 and DJI Litox1. Each drone is used for different types of aerial photography and video projects.
+</p>
+</details>
+
+
+<details>
+<summary>What are your main interests?</summary>
+<p>
+Aerial photography, cinematography, travel,
+nature, wedding shoots, Instagram Reels and
+drone technology,My main interests are drone flying, aerial photography, cinematic videography, travel, nature, events and creating unique visual content from the sky..
+</p>
+</details>
+
+
+<details>
+<summary>Where are you based?</summary>
+<p>
+I’m based in Chennai, India, and I’m available for drone-related projects and content creation..
+</p>
+</details>
+
+
+<details>
+<summary>Where can I see your content?</summary>
+<p>
+My drone content and future Reels will be shared
+through my Instagram profile,You can find my latest drone reels, aerial shots and creative content on Instagram..
+</p>
+</details>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<small style="color:#25e6b5;letter-spacing:2px;">
+LET'S CONNECT
+</small>
+
+<h2>
+Let's Create Something
+<span style="color:#25e6b5;">Amazing.</span>
+</h2>
+
+<p>
+Interested in aerial photography, drone content
+or just want to connect? Reach me through the links below.
+</p>
+
+
+<div class="contact-links">
+
+<a href="tel:7305748136"
+class="btn btn-primary">
+📞 Call Me
+</a>
+
+<a href="https://wa.me/917305748136"
+target="_blank"
+class="btn btn-outline">
+💬 WhatsApp
+</a>
+
+<a href="mailto:duraic710@gmail.com"
+class="btn btn-outline">
+📧 Email
+</a>
+
+<a href="https://instagram.com/llingxsh.13"
+target="_blank"
+class="btn btn-outline">
+📸 Instagram
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026
+<strong>LINGESH DRONE TECH</strong>.
+All Rights Reserved.
+</p>
+
+<p style="margin-top:8px;">
+Dindigul, Tamil Nadu • Drone Creator
+</p>
+
+</footer>
+
+
+</body>
+</html>
+```
