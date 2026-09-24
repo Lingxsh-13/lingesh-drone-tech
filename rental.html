@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Rental | LINGESH DRONE TECH</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            min-height:100vh;
+            background:#031212;
+            color:white;
+            font-family:Arial, sans-serif;
+        }
+
+        .rental-page{
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:30px 15px;
+        }
+
+        .rental-box{
+            width:100%;
+            max-width:800px;
+            text-align:center;
+            padding:50px 25px;
+            background:#082b2b;
+            border:1px solid #25e6b5;
+            border-radius:25px;
+            box-shadow:0 0 35px rgba(37,230,181,.2);
+        }
+
+        h1{
+            color:#25e6b5;
+            font-size:38px;
+            margin-bottom:20px;
+        }
+
+        p{
+            color:#d8eeee;
+            font-size:17px;
+            line-height:1.7;
+        }
+.rental-box{
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(37,230,181,.18), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(0,180,255,.12), transparent 35%),
+        linear-gradient(135deg,#061c1c,#082b2b) !important;
+    transition:.4s ease;
+}
+
+.rental-box:hover{
+    transform:translateY(-8px);
+    box-shadow:
+        0 0 30px rgba(37,230,181,.35),
+        0 0 70px rgba(37,230,181,.12);
+}
+
+.rental-box h1{
+    text-shadow:
+        0 0 10px rgba(37,230,181,.8),
+        0 0 25px rgba(37,230,181,.35);
+}
+.back-home{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    border:1px solid #25e6b5;
+    border-radius:30px;
+    color:#25e6b5;
+    text-decoration:none;
+    font-weight:bold;
+    letter-spacing:1px;
+    transition:.3s ease;
+}
+
+.back-home:hover{
+    background:#25e6b5;
+    color:#031212;
+    box-shadow:0 0 25px rgba(37,230,181,.6);
+    transform:translateY(-3px);
+}
+.rental-info{
+    margin-top:35px;
+}
+
+.rental-info h2{
+    color:#25e6b5;
+    margin-bottom:20px;
+}
+
+.rental-item{
+    display:inline-block;
+    margin:7px;
+    padding:12px 18px;
+    border:1px solid rgba(37,230,181,.5);
+    border-radius:25px;
+    color:#d8eeee;
+    background:rgba(37,230,181,.05);
+}
+
+.event-rental{
+    margin-top:35px;
+    padding:25px 20px;
+    border:1px solid rgba(37,230,181,.4);
+    border-radius:20px;
+    background:rgba(37,230,181,.04);
+}
+
+.event-rental h2{
+    color:#25e6b5;
+    margin-bottom:12px;
+}
+
+.event-rental p{
+    margin-bottom:18px;
+}
+
+.event-rental span{
+    display:inline-block;
+    padding:10px 18px;
+    border:1px solid #25e6b5;
+    border-radius:25px;
+    color:#25e6b5;
+    font-weight:bold;
+    font-size:13px;
+    letter-spacing:1px;
+}
+.whatsapp-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    border-radius:30px;
+    background:#25e6b5;
+    color:#031212;
+    text-decoration:none;
+    font-weight:bold;
+    letter-spacing:1px;
+    box-shadow:0 0 20px rgba(37,230,181,.35);
+    transition:.3s ease;
+}
+
+.whatsapp-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:
+        0 0 25px rgba(37,230,181,.7),
+        0 0 50px rgba(37,230,181,.25);
+}
+.live-bg{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
+}
+
+.live-bg span{
+    position:absolute;
+    width:5px;
+    height:5px;
+    background:#25e6b5;
+    border-radius:50%;
+    opacity:.45;
+    box-shadow:0 0 10px #25e6b5;
+    animation:floatParticle 8s linear infinite;
+}
+
+.live-bg span:nth-child(1){left:8%; animation-delay:0s;}
+.live-bg span:nth-child(2){left:22%; animation-delay:2s;}
+.live-bg span:nth-child(3){left:37%; animation-delay:4s;}
+.live-bg span:nth-child(4){left:51%; animation-delay:1s;}
+.live-bg span:nth-child(5){left:66%; animation-delay:3s;}
+.live-bg span:nth-child(6){left:78%; animation-delay:5s;}
+.live-bg span:nth-child(7){left:89%; animation-delay:2.5s;}
+.live-bg span:nth-child(8){left:95%; animation-delay:6s;}
+
+@keyframes floatParticle{
+    0%{
+        transform:translateY(110vh) scale(.5);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.6;
+    }
+
+    50%{
+        transform:translateY(50vh) translateX(25px) scale(1);
+    }
+
+    80%{
+        opacity:.4;
+    }
+
+    100%{
+        transform:translateY(-10vh) translateX(-25px) scale(.4);
+        opacity:0;
+    }
+}
+
+.rental-page,
+.rental-box{
+    position:relative;
+    z-index:2;
+}
+.rental-box{
+    animation:boxLive 3s ease-in-out infinite;
+}
+
+@keyframes boxLive{
+    0%,100%{
+        box-shadow:
+            0 0 25px rgba(37,230,181,.18),
+            0 0 60px rgba(37,230,181,.05);
+    }
+
+    50%{
+        box-shadow:
+            0 0 40px rgba(37,230,181,.4),
+            0 0 100px rgba(37,230,181,.12);
+    }
+}
+.rental-box h1{
+    animation:titlePulse 2s ease-in-out infinite;
+}
+
+@keyframes titlePulse{
+    0%,100%{
+        transform:scale(1);
+        text-shadow:
+            0 0 8px rgba(37,230,181,.5),
+            0 0 20px rgba(37,230,181,.2);
+    }
+
+    50%{
+        transform:scale(1.04);
+        text-shadow:
+            0 0 15px rgba(37,230,181,1),
+            0 0 35px rgba(37,230,181,.6),
+            0 0 60px rgba(37,230,181,.25);
+    }
+}
+.rental-item{
+    transition:.35s ease;
+    animation:itemFloat 3s ease-in-out infinite;
+}
+
+.rental-item:nth-child(2){animation-delay:.2s;}
+.rental-item:nth-child(3){animation-delay:.4s;}
+.rental-item:nth-child(4){animation-delay:.6s;}
+.rental-item:nth-child(5){animation-delay:.8s;}
+
+.rental-item:hover{
+    transform:translateY(-7px) scale(1.05);
+    background:rgba(37,230,181,.12);
+    border-color:#25e6b5;
+    box-shadow:0 0 20px rgba(37,230,181,.35);
+}
+
+@keyframes itemFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-4px);
+    }
+}
+.whatsapp-btn{
+    position:relative;
+    overflow:hidden;
+    animation:whatsappPulse 2s ease-in-out infinite;
+}
+
+.whatsapp-btn::after{
+    content:"";
+    position:absolute;
+    top:-50%;
+    left:-120%;
+    width:70px;
+    height:200%;
+    background:rgba(255,255,255,.35);
+    transform:rotate(25deg);
+    animation:buttonShine 3s linear infinite;
+}
+
+@keyframes whatsappPulse{
+    0%,100%{
+        box-shadow:0 0 15px rgba(37,230,181,.25);
+    }
+    50%{
+        box-shadow:
+            0 0 30px rgba(37,230,181,.65),
+            0 0 60px rgba(37,230,181,.2);
+    }
+}
+
+@keyframes buttonShine{
+    0%{
+        left:-120%;
+    }
+    100%{
+        left:140%;
+    }
+}
+.rental-drone{
+    position:fixed;
+    top:18%;
+    left:-80px;
+    z-index:1;
+    font-size:42px;
+    pointer-events:none;
+    filter:
+        drop-shadow(0 0 8px rgba(37,230,181,.8))
+        drop-shadow(0 10px 12px rgba(0,0,0,.5));
+    animation:rentalDroneFlight 14s ease-in-out infinite;
+}
+
+@keyframes rentalDroneFlight{
+    0%{
+        left:-80px;
+        top:18%;
+        transform:rotate(5deg) scale(.8);
+    }
+
+    20%{
+        left:25%;
+        top:12%;
+        transform:rotate(-5deg) scale(.9);
+    }
+
+    45%{
+        left:65%;
+        top:30%;
+        transform:rotate(6deg) scale(1);
+    }
+
+    65%{
+        left:45%;
+        top:65%;
+        transform:rotate(-6deg) scale(.85);
+    }
+
+    85%{
+        left:80%;
+        top:20%;
+        transform:rotate(4deg) scale(.9);
+    }
+
+    100%{
+        left:110%;
+        top:15%;
+        transform:rotate(-3deg) scale(.8);
+    }
+}
+.rental-drone::after{
+    content:"";
+    position:absolute;
+    width:7px;
+    height:7px;
+    right:2px;
+    top:18px;
+    background:#25e6b5;
+    border-radius:50%;
+    box-shadow:
+        0 0 6px #25e6b5,
+        0 0 15px #25e6b5,
+        0 0 25px rgba(37,230,181,.8);
+    animation:droneLightBlink 1s ease-in-out infinite alternate;
+}
+
+@keyframes droneLightBlink{
+    from{
+        opacity:.3;
+        transform:scale(.7);
+    }
+    to{
+        opacity:1;
+        transform:scale(1.4);
+    }
+}
+.rental-box::before{
+    content:"";
+    position:absolute;
+    top:-60%;
+    left:-80%;
+    width:60%;
+    height:220%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(37,230,181,.08),
+        rgba(255,255,255,.12),
+        rgba(37,230,181,.08),
+        transparent
+    );
+    transform:rotate(18deg);
+    pointer-events:none;
+    animation:rentalBeam 5s linear infinite;
+}
+
+@keyframes rentalBeam{
+    0%{
+        left:-80%;
+    }
+    100%{
+        left:140%;
+    }
+}
+.rental-item{
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    background:rgba(8,43,43,.35);
+    box-shadow:
+        inset 0 0 15px rgba(37,230,181,.04),
+        0 0 10px rgba(37,230,181,.05);
+}
+.live-status{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:18px;
+    padding:7px 14px;
+    border:1px solid rgba(37,230,181,.4);
+    border-radius:20px;
+    color:#25e6b5;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    background:rgba(37,230,181,.05);
+    box-shadow:0 0 15px rgba(37,230,181,.08);
+}
+
+.status-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#25e6b5;
+    box-shadow:0 0 8px #25e6b5;
+    animation:statusBlink 1s ease-in-out infinite alternate;
+}
+
+@keyframes statusBlink{
+    from{
+        opacity:.3;
+        transform:scale(.7);
+    }
+    to{
+        opacity:1;
+        transform:scale(1.3);
+    }
+}
+.typing-text{
+    display:inline-block;
+    margin-bottom:25px;
+    color:#d8eeee;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:2px;
+    white-space:nowrap;
+    overflow:hidden;
+    border-right:2px solid #25e6b5;
+    width:0;
+    animation:
+        typingEffect 4s steps(42,end) forwards,
+        cursorBlink .7s step-end infinite;
+}
+
+@keyframes typingEffect{
+    from{
+        width:0;
+    }
+    to{
+        width:100%;
+    }
+}
+
+@keyframes cursorBlink{
+    50%{
+        border-color:transparent;
+    }
+}
+.event-rental{
+    position:relative;
+    overflow:hidden;
+    animation:eventGlow 3s ease-in-out infinite;
+}
+
+.event-rental::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:20px;
+    border:1px solid #25e6b5;
+    opacity:.25;
+    animation:eventBorder 2s ease-in-out infinite alternate;
+    pointer-events:none;
+}
+
+.event-rental h2,
+.event-rental p,
+.event-rental .whatsapp-btn{
+    position:relative;
+    z-index:2;
+}
+
+@keyframes eventGlow{
+    0%,100%{
+        box-shadow:0 0 15px rgba(37,230,181,.08);
+    }
+    50%{
+        box-shadow:0 0 30px rgba(37,230,181,.25);
+    }
+}
+
+@keyframes eventBorder{
+    from{
+        opacity:.15;
+    }
+    to{
+        opacity:.7;
+    }
+}
+.typing-text{
+    width:auto !important;
+    border-right:none !important;
+    animation:none !important;
+}
+
+.typing-text::after{
+    display:none !important;
+    content:none !important;
+}
+.event-rental{
+    transform:translateY(0);
+    transition:.4s ease;
+}
+
+.event-rental:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+.event-rental h2{
+    text-shadow:
+        0 0 10px rgba(37,230,181,.6),
+        0 0 25px rgba(37,230,181,.25);
+}
+
+.event-rental span{
+    animation:eventButtonPulse 2s ease-in-out infinite;
+}
+
+@keyframes eventButtonPulse{
+    0%,100%{
+        box-shadow:0 0 8px rgba(37,230,181,.15);
+    }
+    50%{
+        box-shadow:
+            0 0 20px rgba(37,230,181,.5),
+            0 0 40px rgba(37,230,181,.15);
+    }
+}
+@media (max-width:768px){
+
+    .rental-page{
+        padding:20px 12px;
+    }
+
+    .rental-box{
+        padding:35px 16px;
+        border-radius:20px;
+    }
+
+    .rental-box h1{
+        font-size:30px;
+    }
+
+    .typing-text{
+        font-size:11px;
+        letter-spacing:1px;
+    }
+
+    .rental-box p{
+        font-size:15px;
+    }
+
+    .rental-item{
+        display:block;
+        margin:10px auto;
+        width:90%;
+    }
+
+    .event-rental{
+        padding:22px 15px;
+    }
+
+    .whatsapp-btn{
+        width:85%;
+        padding:14px 10px;
+    }
+
+    .rental-drone{
+        font-size:30px;
+    }
+}
+.back-home{
+    position:relative;
+    overflow:hidden;
+    animation:backHomePulse 3s ease-in-out infinite;
+}
+
+.back-home::before{
+    content:"";
+    position:absolute;
+    top:-50%;
+    left:-120%;
+    width:60px;
+    height:200%;
+    background:rgba(255,255,255,.25);
+    transform:rotate(25deg);
+    animation:backShine 4s linear infinite;
+}
+
+@keyframes backHomePulse{
+    0%,100%{
+        box-shadow:0 0 10px rgba(37,230,181,.1);
+    }
+    50%{
+        box-shadow:0 0 25px rgba(37,230,181,.45);
+    }
+}
+
+@keyframes backShine{
+    0%{
+        left:-120%;
+    }
+    100%{
+        left:140%;
+    }
+}
+body{
+    background-color:#031212;
+    background-image:
+        linear-gradient(rgba(37,230,181,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37,230,181,.035) 1px, transparent 1px);
+    background-size:50px 50px;
+    animation:gridMove 12s linear infinite;
+}
+
+@keyframes gridMove{
+    from{
+        background-position:0 0, 0 0;
+    }
+    to{
+        background-position:50px 50px, 50px 50px;
+    }
+}
+.service-note{
+    position:relative;
+    margin-top:30px;
+    padding:25px 20px;
+    border:1px solid rgba(37,230,181,.35);
+    border-radius:20px;
+    background:rgba(37,230,181,.04);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    overflow:hidden;
+    transition:.4s ease;
+}
+
+.service-note:hover{
+    transform:translateY(-6px);
+    border-color:#25e6b5;
+    box-shadow:
+        0 0 25px rgba(37,230,181,.2),
+        0 0 50px rgba(37,230,181,.08);
+}
+
+.service-note h3{
+    color:#25e6b5;
+    margin-bottom:12px;
+    text-shadow:0 0 12px rgba(37,230,181,.45);
+}
+
+.service-note p{
+    color:#d8eeee;
+    line-height:1.6;
+}
+
+.service-line{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px;
+}
+
+.service-line span{
+    padding:8px 14px;
+    border:1px solid rgba(37,230,181,.35);
+    border-radius:20px;
+    color:#25e6b5;
+    font-size:13px;
+    background:rgba(37,230,181,.04);
+}
+</style>
+</head>
+
+<body>
+
+    <div class="rental-drone">
+        🚁
+    </div>
+
+
+    <div class="rental-page">
+    
+    <div class="rental-page">
+
+        <div class="rental-box">
+
+            <h1>🛸 DRONE RENTAL</h1>
+<div class="typing-text">
+    PROFESSIONAL DRONE RENTAL FOR EVERY PROJECT
+</div>
+            <div class="live-status">
+    <span class="status-dot"></span>
+    LIVE RENTAL SERVICE
+</div>
+            <p>
+                Welcome to LINGESH DRONE TECH.
+                <br><br>
+                Professional drones available for
+                aerial photography, videography,
+                travel projects and creative work.
+            </p>
+<br>
+<div class="rental-info">
+<div class="service-note">
+    <h3>🚁 Professional Drone Rental</h3>
+
+    <p>
+        Choose the right drone rental service for
+        photography, videography, events and
+        special aerial projects.
+    </p>
+
+    <div class="service-line">
+        <span>✓ Flexible Rental</span>
+        <span>✓ Aerial Coverage</span>
+        <span>✓ Project Support</span>
+    </div>
+</div>
+
+    <h2>Available For Rental</h2>
+
+    <div class="rental-item">
+        🚁 Aerial Photography
+    </div>
+
+    <div class="rental-item">
+        🎥 Aerial Videography
+    </div>
+
+    <div class="rental-item">
+        🏞️ Travel & Outdoor Projects
+    </div>
+
+    <div class="rental-item">
+        🎬 Creative Video Projects
+    </div>
+    
+    <div class="rental-item">
+    🎉 Events & Functions
+</div>
+<div class="event-rental">
+
+    <h2>🎉 EVENT DRONE RENTAL</h2>
+
+    <p>
+        Weddings, birthdays, college events,
+        corporate events and special functions-ku
+        aerial coverage available.
+    </p>
+
+<a href="https://wa.me/917305748136?text=Hi%20Lingesh%20Drone%20Tech%2C%20I%20need%20a%20drone%20for%20rental."
+   class="whatsapp-btn">
+    📲 BOOK / ENQUIRE NOW
+</a>
+
+</div>
+</div>
+<a href="home.html" class="back-home">
+    ← BACK TO HOME
+</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
