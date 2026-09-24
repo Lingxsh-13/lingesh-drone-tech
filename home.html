@@ -2524,7 +2524,73 @@ body{
         transform:scale(1);
     }
 }
+/* ================================
+   HOME PAGE PERFORMANCE OPTIMIZER
+   ================================ */
 
+/* Keep the flying drone smooth */
+.flying-drone{
+    filter:none !important;
+    will-change:left,top,transform;
+    opacity:.75;
+}
+
+/* Remove expensive blur shadow */
+.flying-drone::before{
+    filter:none !important;
+    opacity:.35 !important;
+}
+
+/* Lighter drone glow */
+.flying-drone::after{
+    box-shadow:
+        0 0 5px #25e6b5,
+        0 0 10px rgba(37,230,181,.45) !important;
+}
+
+/* Reduce expensive backdrop blur */
+nav{
+    backdrop-filter:blur(6px) !important;
+    -webkit-backdrop-filter:blur(6px) !important;
+}
+
+/* Make cards/images render more efficiently */
+.portfolio-card,
+.drone-card,
+.gallery-item,
+.card,
+.dgca-card,
+.timeline-item{
+    will-change:auto;
+}
+
+/* Mobile performance */
+@media(max-width:768px){
+
+    .flying-drone{
+        opacity:.6;
+        filter:none !important;
+        animation-duration:24s !important;
+    }
+
+    nav{
+        backdrop-filter:none !important;
+        -webkit-backdrop-filter:none !important;
+        background:rgba(6,19,19,.97) !important;
+    }
+}
+
+/* Respect reduced-motion devices */
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        scroll-behavior:auto !important;
+    }
+}
 </style>
 
 <div class="page-transition"></div>
@@ -2559,6 +2625,441 @@ document.querySelectorAll('a[href]').forEach(link => {
 });
 </script>
 </style>
+<style>
+
+/* =========================================
+   LINGESH DRONE TECH - FAST PAGE LOAD
+   ========================================= */
+
+/* Remove artificial page loading animation */
+body{
+    animation:none !important;
+    transform:none !important;
+    opacity:1 !important;
+}
+
+/* Remove old transition overlay */
+.page-transition{
+    display:none !important;
+}
+
+/* Stop expensive hero radar animation */
+.hero::before,
+.hero::after{
+    animation:none !important;
+    opacity:.35;
+}
+
+/* Make flying drone cheaper to render */
+.flying-drone{
+    animation:none !important;
+    left:70% !important;
+    top:20% !important;
+
+    filter:none !important;
+    will-change:auto !important;
+}
+
+.flying-drone::before{
+    display:none !important;
+}
+
+.flying-drone::after{
+    animation:none !important;
+
+    box-shadow:
+        0 0 5px rgba(37,230,181,.7) !important;
+}
+
+/* Remove expensive navbar blur */
+nav{
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+    background:rgba(6,19,19,.97) !important;
+}
+
+/* Reduce continuous background animations */
+.floating-bg span{
+    animation:none !important;
+}
+
+/* Reduce expensive rental animation */
+.rental-card::before,
+.rental-card::after{
+    animation:none !important;
+}
+
+/* Keep page rendering simple */
+img{
+    content-visibility:auto;
+}
+
+/* Mobile optimization */
+@media(max-width:768px){
+
+    .hero::before,
+    .hero::after{
+        display:none !important;
+    }
+
+    .flying-drone{
+        display:none !important;
+    }
+
+    .floating-bg{
+        display:none !important;
+    }
+
+    nav{
+        backdrop-filter:none !important;
+        -webkit-backdrop-filter:none !important;
+    }
+}
+
+</style>
+
+<script>
+
+/* =========================================
+   IMAGE LOAD OPTIMIZATION
+   ========================================= */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const images = document.querySelectorAll("img");
+
+    images.forEach(function(img,index){
+
+        img.decoding = "async";
+
+        /* Keep only the first important image eager */
+        if(index > 0){
+            img.loading = "lazy";
+        }
+
+    });
+
+});
+
+
+/* =========================================
+   REMOVE OLD 450ms PAGE DELAY
+   ========================================= */
+
+document.querySelectorAll('a[href]').forEach(function(link){
+
+    link.addEventListener('click',function(e){
+
+        const url = this.href;
+
+        /* Allow normal anchor links */
+        if(
+            !url ||
+            url.startsWith('javascript:') ||
+            this.target === '_blank' ||
+            url.includes('#')
+        ){
+            return;
+        }
+
+        /*
+           IMPORTANT:
+           No preventDefault()
+           No setTimeout()
+           Browser navigates immediately.
+        */
+
+    });
+
+});
+
+
+/* =========================================
+   SAFETY: REMOVE TRANSITION IF IT EXISTS
+   ========================================= */
+
+window.addEventListener("pageshow",function(){
+
+    const transition =
+        document.querySelector(".page-transition");
+
+    if(transition){
+        transition.remove();
+    }
+
+});
+
+</script>
+<style>
+
+/* ==========================================
+   FINAL RENTAL CARD PERFORMANCE FIX
+   ========================================== */
+
+/* Kill all continuous effects */
+.rental-card::before,
+.rental-card::after{
+    display:none !important;
+    animation:none !important;
+}
+
+/* Lightweight card */
+.rental-card{
+    position:relative !important;
+    overflow:hidden !important;
+
+    background:#082222 !important;
+
+    border:1px solid rgba(37,230,181,.45) !important;
+    border-radius:25px !important;
+
+    box-shadow:none !important;
+
+    transition:none !important;
+
+    transform:none !important;
+
+    will-change:auto !important;
+}
+
+/* No hover movement / repaint */
+.rental-card:hover{
+    transform:none !important;
+
+    border-color:#25e6b5 !important;
+
+    box-shadow:
+        0 0 18px rgba(37,230,181,.18) !important;
+}
+
+/* Lightweight heading */
+.rental-card h2{
+    text-shadow:none !important;
+}
+
+/* Lightweight button */
+.rental-card span{
+    box-shadow:none !important;
+
+    transition:none !important;
+}
+
+.rental-card:hover span{
+    background:#25e6b5 !important;
+    color:#031212 !important;
+
+    box-shadow:none !important;
+}
+
+
+/* ==========================================
+   STOP OTHER HEAVY EFFECTS WHILE SCROLLING
+   ========================================== */
+
+body{
+    background-size:100% 100% !important;
+}
+
+/* Disable animated section title */
+.section-title h2::after{
+    animation:none !important;
+}
+
+/* Disable portfolio hover filters */
+.portfolio-card:hover img{
+    filter:none !important;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media(max-width:768px){
+
+    .rental-card{
+        box-shadow:none !important;
+    }
+
+    .rental-card:hover{
+        transform:none !important;
+        box-shadow:none !important;
+    }
+
+    .section-title h2::after{
+        animation:none !important;
+    }
+
+}
+
+</style>
+<style>
+
+/* ==========================================
+   EFFECTS ON + PERFORMANCE FIX
+   ========================================== */
+
+/* Background animation OFF — main lag source */
+body{
+    animation:none !important;
+    background-size:100% 100% !important;
+}
+
+/* Rental card effects ON */
+.rental-card{
+    position:relative;
+    overflow:hidden;
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease !important;
+
+    box-shadow:
+        0 0 20px rgba(37,230,181,.12) !important;
+}
+
+/* Rental card glow border */
+.rental-card::before{
+    display:block !important;
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:25px;
+    border:1px solid rgba(37,230,181,.45);
+
+    animation:rentalGlowSmooth 3s ease-in-out infinite alternate !important;
+
+    pointer-events:none;
+}
+
+/* Shine effect — lighter + slower */
+.rental-card::after{
+    display:block !important;
+    content:"";
+    position:absolute;
+
+    width:80px;
+    height:180%;
+
+    top:-40%;
+    left:-150px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.10),
+        transparent
+    );
+
+    transform:rotate(20deg);
+
+    animation:rentalShineSmooth 6s linear infinite !important;
+
+    pointer-events:none;
+}
+
+/* Hover effect ON */
+.rental-card:hover{
+    transform:translateY(-6px) scale(1.01) !important;
+
+    border-color:#25e6b5 !important;
+
+    box-shadow:
+        0 0 25px rgba(37,230,181,.22),
+        0 0 45px rgba(37,230,181,.08) !important;
+}
+
+/* Heading glow ON but lighter */
+.rental-card h2{
+    text-shadow:
+        0 0 8px rgba(37,230,181,.5),
+        0 0 18px rgba(37,230,181,.18) !important;
+}
+
+/* Button effect */
+.rental-card span{
+    transition:
+        background .2s ease,
+        color .2s ease,
+        box-shadow .2s ease !important;
+
+    box-shadow:
+        0 0 10px rgba(37,230,181,.12) !important;
+}
+
+.rental-card:hover span{
+    background:#25e6b5 !important;
+    color:#031212 !important;
+
+    box-shadow:
+        0 0 18px rgba(37,230,181,.35) !important;
+}
+
+
+/* ==========================================
+   SMOOTH LIGHT ANIMATIONS
+   ========================================== */
+
+@keyframes rentalGlowSmooth{
+    0%{
+        opacity:.25;
+    }
+    100%{
+        opacity:.75;
+    }
+}
+
+@keyframes rentalShineSmooth{
+    0%{
+        left:-150px;
+    }
+
+    100%{
+        left:120%;
+    }
+}
+
+
+/* ==========================================
+   OTHER EFFECTS — KEEP THEM, BUT REDUCE COST
+   ========================================== */
+
+.flying-drone{
+    will-change:transform !important;
+}
+
+.hero::before,
+.hero::after{
+    animation-duration:8s !important;
+}
+
+.section-title h2::after{
+    animation-duration:4s !important;
+}
+
+
+/* ==========================================
+   MOBILE — EFFECTS STILL ON
+   ========================================== */
+
+@media(max-width:768px){
+
+    .rental-card{
+        transform:none;
+    }
+
+    .rental-card:hover{
+        transform:translateY(-3px) !important;
+    }
+
+    .rental-card::after{
+        animation-duration:8s !important;
+    }
+
+}
+
+</style>
+
 </head>
 
 <body>
@@ -2947,15 +3448,6 @@ aerial photography and videos.
 One of the drones in my collection
 for aerial exploration.
 </p>
-
-<br>
-
-<a href="#" class="btn btn-outline">View Details</a>
-
-</div>
-</div>
-<h3>DJI Litox1</h3>
-
 
 <br>
 
