@@ -2301,6 +2301,169 @@ section h2::after{
     }
 
 }
+.rental-card{
+    width:100%;
+    box-sizing:border-box;
+    margin:35px 0;
+    padding:30px;
+    text-align:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37,230,181,0.12),
+            rgba(0,80,100,0.18)
+        );
+
+    border:1px solid rgba(37,230,181,0.4);
+    border-radius:20px;
+
+    box-shadow:
+        0 0 20px rgba(37,230,181,0.1);
+
+    cursor:pointer;
+    transition:0.4s ease;
+}
+
+.rental-card h2{
+    color:#25e6b5;
+    margin:0 0 12px;
+}
+
+.rental-card p{
+    color:#c9dede;
+    line-height:1.6;
+}
+
+.rental-card span{
+    display:inline-block;
+    margin-top:15px;
+    color:#25e6b5;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.rental-card:hover{
+    transform:translateY(-6px);
+    border-color:#25e6b5;
+    box-shadow:
+        0 0 25px rgba(37,230,181,0.3);
+}
+.rental-card{
+    width:100%;
+    box-sizing:border-box;
+    margin:45px 0;
+    padding:40px 25px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(37,230,181,.18), transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(0,180,255,.14), transparent 35%),
+        linear-gradient(135deg,#061c1c,#082b2b);
+
+    border:1px solid rgba(37,230,181,.55);
+    border-radius:25px;
+
+    box-shadow:
+        0 0 20px rgba(37,230,181,.15),
+        inset 0 0 25px rgba(37,230,181,.05);
+
+    cursor:pointer;
+    transition:.4s ease;
+}
+
+/* glowing border */
+.rental-card::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:25px;
+    border:1px solid #25e6b5;
+    opacity:.25;
+    animation:rentalGlow 2s ease-in-out infinite alternate;
+}
+
+/* moving shine */
+.rental-card::after{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:200%;
+    top:-50%;
+    left:-150px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.12),
+        transparent
+    );
+
+    transform:rotate(20deg);
+    animation:rentalShine 4s linear infinite;
+}
+
+.rental-card h2{
+    position:relative;
+    z-index:2;
+    color:#25e6b5;
+    font-size:30px;
+    letter-spacing:2px;
+    margin:0 0 15px;
+    text-shadow:
+        0 0 10px rgba(37,230,181,.7),
+        0 0 25px rgba(37,230,181,.3);
+}
+
+.rental-card p{
+    position:relative;
+    z-index:2;
+    color:#d8eeee;
+    font-size:16px;
+    line-height:1.7;
+    max-width:650px;
+    margin:0 auto;
+}
+
+.rental-card span{
+    position:relative;
+    z-index:2;
+    display:inline-block;
+    margin-top:22px;
+    padding:12px 24px;
+    border:1px solid #25e6b5;
+    border-radius:30px;
+    color:#25e6b5;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    box-shadow:0 0 15px rgba(37,230,181,.15);
+}
+
+.rental-card:hover{
+    transform:translateY(-10px) scale(1.02);
+    border-color:#25e6b5;
+    box-shadow:
+        0 0 30px rgba(37,230,181,.3),
+        0 0 70px rgba(37,230,181,.12);
+}
+
+.rental-card:hover span{
+    background:#25e6b5;
+    color:#031212;
+    box-shadow:0 0 25px rgba(37,230,181,.6);
+}
+
+@keyframes rentalGlow{
+    from{opacity:.15;}
+    to{opacity:.7;}
+}
+
+@keyframes rentalShine{
+    0%{left:-150px;}
+    100%{left:120%;}
+}
 </style>
 </head>
 
@@ -2697,11 +2860,34 @@ for aerial exploration.
 
 </div>
 </div>
+<h3>DJI Litox1</h3>
 
+
+<br>
+
+<a href="#" class="btn btn-outline">View Details</a>
+
+</div>
 
 </div>
 </div>
 </section>
+ 
+<!-- 👇 DRONE RENTAL CARD @இங்கே -->
+
+<div class="rental-card" onclick="window.location.href='rental.html'">
+
+    <h2>🛸 DRONE RENTAL</h2>
+
+    <p>
+        Need a drone for your project?
+        Rent a drone for aerial photography,
+        videos and creative work.
+    </p>
+
+    <span>TOUCH TO EXPLORE →</span>
+
+</div>
 
 
 <!-- PORTFOLIO -->
