@@ -2626,98 +2626,6 @@ document.querySelectorAll('a[href]').forEach(link => {
 </script>
 </style>
 <style>
-
-/* =========================================
-   LINGESH DRONE TECH - FAST PAGE LOAD
-   ========================================= */
-
-/* Remove artificial page loading animation */
-body{
-    animation:none !important;
-    transform:none !important;
-    opacity:1 !important;
-}
-
-/* Remove old transition overlay */
-.page-transition{
-    display:none !important;
-}
-
-/* Stop expensive hero radar animation */
-.hero::before,
-.hero::after{
-    animation:none !important;
-    opacity:.35;
-}
-
-/* Make flying drone cheaper to render */
-.flying-drone{
-    animation:none !important;
-    left:70% !important;
-    top:20% !important;
-
-    filter:none !important;
-    will-change:auto !important;
-}
-
-.flying-drone::before{
-    display:none !important;
-}
-
-.flying-drone::after{
-    animation:none !important;
-
-    box-shadow:
-        0 0 5px rgba(37,230,181,.7) !important;
-}
-
-/* Remove expensive navbar blur */
-nav{
-    backdrop-filter:none !important;
-    -webkit-backdrop-filter:none !important;
-    background:rgba(6,19,19,.97) !important;
-}
-
-/* Reduce continuous background animations */
-.floating-bg span{
-    animation:none !important;
-}
-
-/* Reduce expensive rental animation */
-.rental-card::before,
-.rental-card::after{
-    animation:none !important;
-}
-
-/* Keep page rendering simple */
-img{
-    content-visibility:auto;
-}
-
-/* Mobile optimization */
-@media(max-width:768px){
-
-    .hero::before,
-    .hero::after{
-        display:none !important;
-    }
-
-    .flying-drone{
-        display:none !important;
-    }
-
-    .floating-bg{
-        display:none !important;
-    }
-
-    nav{
-        backdrop-filter:none !important;
-        -webkit-backdrop-filter:none !important;
-    }
-}
-
-</style>
-
 <script>
 
 /* =========================================
@@ -3054,6 +2962,396 @@ body{
 
     .rental-card::after{
         animation-duration:8s !important;
+    }
+
+}
+
+</style>
+<style>
+
+/* ==========================================
+   MOBILE PERFORMANCE FIX
+   EFFECTS KEEP — HEAVY ANIMATION REDUCED
+   ========================================== */
+
+@media (max-width: 768px){
+
+    /* --------------------------------------
+       1. PAGE BACKGROUND
+       -------------------------------------- */
+
+    body{
+        animation:none !important;
+        background-size:100% 100% !important;
+    }
+
+
+    /* --------------------------------------
+       2. NAVBAR
+       Blur is expensive on mobile
+       Keep glass-like appearance
+       -------------------------------------- */
+
+    nav{
+        backdrop-filter:none !important;
+        -webkit-backdrop-filter:none !important;
+
+        background:rgba(6,19,19,.96) !important;
+    }
+
+
+    /* --------------------------------------
+       3. FLYING DRONE
+       Keep drone visible but stop movement
+       -------------------------------------- */
+
+    .flying-drone{
+        animation:none !important;
+
+        left:75% !important;
+        top:18% !important;
+
+        filter:none !important;
+
+        will-change:auto !important;
+    }
+
+    .flying-drone::before{
+        display:none !important;
+    }
+
+    .flying-drone::after{
+        animation:none !important;
+    }
+
+
+    /* --------------------------------------
+       4. HERO RADAR EFFECT
+       Keep glow, stop continuous movement
+       -------------------------------------- */
+
+    .hero::before,
+    .hero::after{
+        animation:none !important;
+        opacity:.30 !important;
+    }
+
+
+    /* --------------------------------------
+       5. FLOATING BACKGROUND
+       Keep particles, stop movement
+       -------------------------------------- */
+
+    .floating-bg span{
+        animation:none !important;
+        opacity:.35 !important;
+    }
+
+
+    /* --------------------------------------
+       6. SECTION TITLE
+       Keep line, stop repeated animation
+       -------------------------------------- */
+
+    .section-title h2::after{
+        animation:none !important;
+    }
+
+
+    /* --------------------------------------
+       7. RENTAL CARD
+       Keep glow + hover
+       Stop continuous shine animation
+       -------------------------------------- */
+
+    .rental-card::before{
+        animation:none !important;
+        opacity:.55 !important;
+    }
+
+    .rental-card::after{
+        display:none !important;
+        animation:none !important;
+    }
+
+    .rental-card{
+        transition:
+            transform .2s ease,
+            box-shadow .2s ease !important;
+
+        box-shadow:
+            0 0 15px rgba(37,230,181,.12) !important;
+    }
+
+
+    /* --------------------------------------
+       8. PORTFOLIO IMAGES
+       Avoid expensive filter processing
+       -------------------------------------- */
+
+    .portfolio-card:hover img{
+        filter:none !important;
+    }
+
+
+    /* --------------------------------------
+       9. GENERAL IMAGE OPTIMIZATION
+       -------------------------------------- */
+
+    img{
+        content-visibility:auto;
+    }
+
+}
+
+
+/* ==========================================
+   VERY LOW POWER / SMALL PHONES
+   ========================================== */
+
+@media (max-width: 480px){
+
+    .flying-drone{
+        opacity:.85 !important;
+    }
+
+    .floating-bg{
+        opacity:.5 !important;
+    }
+
+    .hero::before,
+    .hero::after{
+        opacity:.20 !important;
+    }
+
+    .rental-card{
+        box-shadow:
+            0 0 10px rgba(37,230,181,.10) !important;
+    }
+
+}
+
+</style>
+<style>
+
+/* =========================================
+   RENTAL SECTION MOBILE LAG FIX
+   EFFECTS STAY — HEAVY EFFECTS PAUSE
+   ========================================= */
+
+@media (max-width: 768px){
+
+    /* Rental card itself stays smooth */
+    .rental-card{
+        transform:translateZ(0);
+        transition:
+            transform .18s ease,
+            border-color .18s ease,
+            box-shadow .18s ease !important;
+
+        box-shadow:
+            0 0 14px rgba(37,230,181,.12) !important;
+    }
+
+    /* Keep border glow */
+    .rental-card::before{
+        animation:none !important;
+        opacity:.55 !important;
+    }
+
+    /* Remove only moving shine */
+    .rental-card::after{
+        display:none !important;
+        animation:none !important;
+    }
+
+    /* Smooth hover/touch */
+    .rental-card:hover{
+        transform:translateY(-3px) !important;
+
+        box-shadow:
+            0 0 20px rgba(37,230,181,.20) !important;
+    }
+
+
+    /* =====================================
+       WHEN RENTAL CARD IS ON SCREEN
+       PAUSE HEAVY PAGE EFFECTS
+       ===================================== */
+
+    body.rental-visible .flying-drone{
+        animation-play-state:paused !important;
+    }
+
+    body.rental-visible .floating-bg span{
+        animation-play-state:paused !important;
+    }
+
+    body.rental-visible .hero::before,
+    body.rental-visible .hero::after{
+        animation-play-state:paused !important;
+    }
+
+    body.rental-visible .section-title h2::after{
+        animation-play-state:paused !important;
+    }
+
+    /* Background animation pause */
+    body.rental-visible{
+        animation-play-state:paused !important;
+    }
+
+}
+
+
+<style>
+
+<style>
+
+/* =========================================
+   MOBILE EFFECTS - FINAL CLEAN VERSION
+   ========================================= */
+
+@media (max-width:768px){
+
+    /* -------------------------------
+       LIVE BACKGROUND
+       ------------------------------- */
+
+    body{
+        background-size:200% 200% !important;
+        animation:mobileLiveBG 10s ease-in-out infinite !important;
+    }
+
+    @keyframes mobileLiveBG{
+        0%{
+            background-position:0% 50%;
+        }
+
+        50%{
+            background-position:100% 50%;
+        }
+
+        100%{
+            background-position:0% 50%;
+        }
+    }
+
+
+    /* -------------------------------
+       FLOATING BUBBLES
+       ------------------------------- */
+
+    .floating-bg{
+        display:block !important;
+        visibility:visible !important;
+        opacity:1 !important;
+    }
+
+    .floating-bg span{
+        display:block !important;
+        visibility:visible !important;
+
+        animation-name:floatDesign !important;
+        animation-timing-function:linear !important;
+        animation-iteration-count:infinite !important;
+
+        will-change:transform,opacity;
+    }
+
+
+    /* -------------------------------
+       FLYING DRONE
+       ------------------------------- */
+
+    .flying-drone{
+        display:block !important;
+        visibility:visible !important;
+        opacity:.82 !important;
+
+        /* FORCE MOVEMENT */
+        animation-name:mobileDroneMove !important;
+        animation-duration:12s !important;
+        animation-timing-function:ease-in-out !important;
+        animation-iteration-count:infinite !important;
+
+        will-change:transform,left,top !important;
+    }
+
+    @keyframes mobileDroneMove{
+
+        0%{
+            left:10%;
+            top:18%;
+            transform:scale(.75) translate3d(0,0,0);
+        }
+
+        25%{
+            left:65%;
+            top:25%;
+            transform:scale(.75) translate3d(0,0,0);
+        }
+
+        50%{
+            left:72%;
+            top:55%;
+            transform:scale(.75) translate3d(0,0,0);
+        }
+
+        75%{
+            left:30%;
+            top:65%;
+            transform:scale(.75) translate3d(0,0,0);
+        }
+
+        100%{
+            left:10%;
+            top:18%;
+            transform:scale(.75) translate3d(0,0,0);
+        }
+
+    }
+
+
+    /* -------------------------------
+       DRONE GLOW
+       ------------------------------- */
+
+    .flying-drone{
+        filter:drop-shadow(
+            0 0 8px rgba(37,230,181,.5)
+        ) !important;
+    }
+
+
+    /* -------------------------------
+       RENTAL CARD
+       ------------------------------- */
+
+    .rental-card::before{
+        animation:rentalGlowMobile
+        3s
+        ease-in-out
+        infinite
+        alternate !important;
+    }
+
+    /* Moving shine OFF for performance */
+    .rental-card::after{
+        display:none !important;
+        animation:none !important;
+    }
+
+}
+
+@keyframes rentalGlowMobile{
+
+    from{
+        opacity:.25;
+    }
+
+    to{
+        opacity:.7;
     }
 
 }
