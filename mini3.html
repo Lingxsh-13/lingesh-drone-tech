@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DJI Mini 3 | LINGESH DRONE TECH</title>
+<title>DJI Avata 360 | LINGESH DRONE TECH</title>
 
 <style>
 
@@ -14,352 +16,977 @@
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
+
     background:
-        radial-gradient(circle at 20% 20%, rgba(37,230,181,.12), transparent 35%),
-        radial-gradient(circle at 80% 80%, rgba(0,150,255,.10), transparent 35%),
-        #061414;
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(37,230,181,.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(0,150,255,.08),
+            transparent 30%
+        ),
+        #031212;
+
     color:#e8ffff;
     min-height:100vh;
     line-height:1.7;
+
+    overflow-x:hidden;
 }
 
-/* HEADER */
+
+/* =========================================
+   LIGHTWEIGHT LIVE PREMIUM BACKGROUND
+   ========================================= */
+
+body::before{
+    content:"";
+
+    position:fixed;
+    inset:-30%;
+
+    pointer-events:none;
+    z-index:-2;
+
+    background:
+        radial-gradient(
+            circle at 30% 40%,
+            rgba(37,230,181,.10),
+            transparent 22%
+        ),
+        radial-gradient(
+            circle at 70% 65%,
+            rgba(0,180,255,.07),
+            transparent 25%
+        );
+
+    animation:premiumAmbient 14s ease-in-out infinite alternate;
+
+    will-change:transform;
+}
+
+@keyframes premiumAmbient{
+
+    0%{
+        transform:translate3d(-3%,-2%,0);
+    }
+
+    100%{
+        transform:translate3d(3%,2%,0);
+    }
+
+}
+
+
+/* =========================================
+   PREMIUM TECH GRID
+   ========================================= */
+
+body::after{
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+    z-index:-1;
+
+    background:
+        linear-gradient(
+            rgba(37,230,181,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(37,230,181,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:45px 45px;
+
+    opacity:.45;
+
+    animation:techGrid 18s linear infinite;
+
+    will-change:background-position;
+}
+
+@keyframes techGrid{
+
+    from{
+        background-position:0 0,0 0;
+    }
+
+    to{
+        background-position:45px 45px,45px 45px;
+    }
+
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
 
 header{
     padding:25px 20px;
+
     text-align:center;
-    border-bottom:1px solid rgba(37,230,181,.25);
-    background:rgba(3,18,18,.85);
+
+    border-bottom:
+        1px solid
+        rgba(37,230,181,.25);
+
+    background:rgba(3,18,18,.82);
 }
 
 .logo{
     color:#25e6b5;
+
     font-size:20px;
     font-weight:bold;
+
     letter-spacing:2px;
+
+    text-shadow:
+        0 0 8px rgba(37,230,181,.35);
 }
 
-/* MAIN */
+
+/* =========================================
+   CONTAINER
+   ========================================= */
 
 .container{
     width:92%;
     max-width:1000px;
+
     margin:auto;
 }
 
+
+/* =========================================
+   PREMIUM HERO
+   ========================================= */
+
 .drone-hero{
+    position:relative;
+
     text-align:center;
-    padding:45px 20px 30px;
+
+    padding:
+        55px
+        20px
+        45px;
+
+    margin-bottom:30px;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(37,230,181,.12),
+            transparent 55%
+        );
+
+    border-radius:28px;
+
+    overflow:hidden;
 }
+
+
+/* =========================================
+   AVATA IMAGE
+   ========================================= */
 
 .drone-hero img{
+
     width:100%;
-    max-width:500px;
-    height:300px;
+
+    max-width:620px;
+
+    height:380px;
+
     object-fit:contain;
-    filter:drop-shadow(0 0 25px rgba(37,230,181,.25));
+
+    display:block;
+
+    margin:0 auto 25px;
+
+    padding:18px;
+
+    border-radius:24px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(37,230,181,.12),
+            transparent 62%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.035),
+            rgba(37,230,181,.025)
+        );
+
+    border:
+        1px solid
+        rgba(37,230,181,.28);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45),
+        0 0 30px rgba(37,230,181,.08),
+        inset 0 0 25px rgba(37,230,181,.04);
+
+    filter:
+        drop-shadow(
+            0 14px 18px
+            rgba(0,0,0,.55)
+        )
+        drop-shadow(
+            0 0 12px
+            rgba(37,230,181,.12)
+        );
+
+    transform:scale(1.08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 }
+
+
+.drone-hero img:hover{
+
+    transform:scale(1.13);
+
+    box-shadow:
+        0 22px 55px rgba(0,0,0,.55),
+        0 0 40px rgba(37,230,181,.16),
+        inset 0 0 30px rgba(37,230,181,.06);
+}
+
+
+/* =========================================
+   PREMIUM TITLE
+   ========================================= */
 
 .drone-hero h1{
-    color:#25e6b5;
-    font-size:38px;
-    margin-top:20px;
-    letter-spacing:2px;
+
+    position:relative;
+
+    color:#ffffff;
+
+    font-size:
+        clamp(36px,7vw,64px);
+
+    font-weight:900;
+
+    letter-spacing:2.5px;
+
+    text-shadow:
+        0 0 4px rgba(255,255,255,.8),
+        0 0 12px rgba(37,230,181,.45),
+        0 0 28px rgba(37,230,181,.18);
+
+    animation:
+        titleGlow 4s ease-in-out infinite;
 }
 
-.drone-hero p{
-    color:#b9d6d6;
-    margin-top:10px;
-}
 
-/* CONTENT CARD */
+/* TITLE UNDERLINE */
 
-.details-card{
-    margin:25px 0 50px;
-    padding:30px;
-    background:rgba(6,28,28,.75);
-    border:1px solid rgba(37,230,181,.35);
-    border-radius:20px;
+.drone-hero h1::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-14px;
+
+    width:90px;
+
+    height:2px;
+
+    transform:translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #25e6b5,
+            #ffffff,
+            #25e6b5,
+            transparent
+        );
+
     box-shadow:
-        0 0 25px rgba(37,230,181,.08),
-        inset 0 0 20px rgba(37,230,181,.03);
+        0 0 8px rgba(37,230,181,.65),
+        0 0 18px rgba(37,230,181,.25);
+
+    opacity:.9;
+
+    animation:
+        titleLine 3s ease-in-out infinite;
 }
 
-.details-card h2{
-    color:#25e6b5;
-    margin-bottom:15px;
-    font-size:24px;
+
+/* SOFT TITLE GLOW */
+
+.drone-hero h1::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:70%;
+    height:70%;
+
+    transform:
+        translate(-50%,-50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(37,230,181,.10),
+            transparent 70%
+        );
+
+    filter:blur(12px);
+
+    z-index:-1;
+
+    pointer-events:none;
 }
 
-.details-card p{
-    color:#d5eaea;
-    margin-bottom:20px;
-}
 
-/* SPECS */
+@keyframes titleGlow{
 
-.specs{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    margin-top:20px;
-}
+    0%,100%{
 
-.spec{
-    padding:15px;
-    border:1px solid rgba(37,230,181,.18);
-    border-radius:12px;
-    background:rgba(0,0,0,.15);
-}
-
-.spec strong{
-    display:block;
-    color:#25e6b5;
-    margin-bottom:4px;
-}
-
-.spec span{
-    color:#d8eeee;
-}
-
-/* LIST */
-
-ul{
-    padding-left:22px;
-    color:#d8eeee;
-}
-
-li{
-    margin-bottom:10px;
-}
-
-/* BACK BUTTON */
-
-.back-btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:13px 25px;
-    border:1px solid #25e6b5;
-    border-radius:30px;
-    color:#25e6b5;
-    text-decoration:none;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.back-btn:hover{
-    background:#25e6b5;
-    color:#031212;
-    box-shadow:0 0 20px rgba(37,230,181,.45);
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-    .drone-hero{
-        padding-top:30px;
+        text-shadow:
+            0 0 4px rgba(255,255,255,.7),
+            0 0 10px rgba(37,230,181,.30),
+            0 0 22px rgba(37,230,181,.10);
     }
 
-    .drone-hero h1{
-        font-size:30px;
+    50%{
+
+        text-shadow:
+            0 0 6px rgba(255,255,255,.95),
+            0 0 16px rgba(37,230,181,.60),
+            0 0 32px rgba(37,230,181,.22);
+    }
+
+}
+
+
+@keyframes titleLine{
+
+    0%,100%{
+
+        width:55px;
+
+        opacity:.55;
+    }
+
+    50%{
+
+        width:110px;
+
+        opacity:1;
+    }
+
+}
+
+
+/* HERO DESCRIPTION */
+
+.drone-hero p{
+
+    max-width:650px;
+
+    margin:20px auto 0;
+
+    color:#c9e9e4;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    text-shadow:
+        0 0 5px
+        rgba(37,230,181,.12);
+
+    letter-spacing:.3px;
+}
+
+
+/* =========================================
+   PREMIUM CONTENT CARDS
+   ========================================= */
+
+.details-card{
+
+    position:relative;
+
+    margin:25px 0;
+
+    padding:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8,35,35,.82),
+            rgba(4,22,22,.82)
+        );
+
+    border:
+        1px solid
+        rgba(37,230,181,.28);
+
+    border-radius:20px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.30),
+        inset 0 0 20px
+        rgba(37,230,181,.025);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
+}
+
+
+.details-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:
+        rgba(37,230,181,.45);
+}
+
+
+/* CARD HEADINGS */
+
+.details-card h2{
+
+    color:#eafffa;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,.25),
+        0 0 12px rgba(37,230,181,.28);
+}
+
+
+.details-card h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:45px;
+
+    height:2px;
+
+    margin-top:9px;
+
+    background:#25e6b5;
+
+    box-shadow:
+        0 0 7px
+        rgba(37,230,181,.45);
+}
+
+
+/* CARD TEXT */
+
+.details-card p{
+
+    color:#d5eaea;
+
+    margin-bottom:15px;
+
+    text-shadow:
+        0 0 3px
+        rgba(37,230,181,.06);
+}
+
+
+/* =========================================
+   FEATURES
+   ========================================= */
+
+.feature-list{
+
+    list-style:none;
+
+    padding:0;
+}
+
+
+.feature-list li{
+
+    color:#d8eeee;
+
+    padding:13px 15px;
+
+    margin-bottom:10px;
+
+    background:
+        rgba(0,0,0,.18);
+
+    border-left:
+        3px solid
+        #25e6b5;
+
+    border-radius:8px;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+
+    text-shadow:
+        0 0 3px
+        rgba(37,230,181,.08);
+}
+
+
+.feature-list li:hover{
+
+    transform:translateX(5px);
+
+    background:
+        rgba(37,230,181,.08);
+
+    border-left-color:#ffffff;
+}
+
+
+/* =========================================
+   USES
+   ========================================= */
+
+.uses-list{
+
+    padding-left:25px;
+}
+
+
+.uses-list li{
+
+    color:#d8eeee;
+
+    margin-bottom:12px;
+
+    padding-left:5px;
+
+    text-shadow:
+        0 0 3px
+        rgba(37,230,181,.08);
+}
+
+
+.uses-list li::marker{
+
+    color:#25e6b5;
+
+    font-weight:bold;
+}
+
+
+/* =========================================
+   PREMIUM BACK BUTTON
+   ========================================= */
+
+.back-btn{
+
+    display:inline-block;
+
+    margin:25px 0 50px;
+
+    padding:13px 28px;
+
+    border:
+        1px solid
+        #25e6b5;
+
+    border-radius:30px;
+
+    color:#25e6b5;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    background:
+        rgba(37,230,181,.04);
+
+    box-shadow:
+        0 0 10px
+        rgba(37,230,181,.12);
+
+    text-shadow:
+        0 0 6px
+        rgba(37,230,181,.35);
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.back-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#25e6b5;
+
+    color:#031212;
+
+    box-shadow:
+        0 0 15px
+        rgba(37,230,181,.55),
+        0 0 30px
+        rgba(37,230,181,.20);
+
+    text-shadow:none;
+}
+
+
+/* =========================================
+   MOBILE OPTIMISATION
+   ========================================= */
+
+@media(max-width:768px){
+
+    body::before{
+
+        animation-duration:18s;
+
+        opacity:.75;
+    }
+
+    body::after{
+
+        background-size:55px 55px;
+
+        animation-duration:25s;
+
+        opacity:.25;
+    }
+
+    .drone-hero{
+
+        padding:
+            45px
+            15px
+            35px;
     }
 
     .drone-hero img{
-        height:220px;
+
+        height:300px;
+
+        transform:scale(1.06);
+
+        filter:
+            drop-shadow(
+                0 12px 16px
+                rgba(0,0,0,.5)
+            )
+            drop-shadow(
+                0 0 8px
+                rgba(37,230,181,.10)
+            );
+    }
+
+    .drone-hero img:hover{
+
+        transform:scale(1.06);
+    }
+
+    .drone-hero h1{
+
+        font-size:36px;
+
+        text-shadow:
+            0 0 4px
+            rgba(255,255,255,.75),
+
+            0 0 10px
+            rgba(37,230,181,.35),
+
+            0 0 18px
+            rgba(37,230,181,.12);
+
+        animation-duration:5s;
+    }
+
+    .drone-hero h1::after{
+
+        filter:blur(8px);
     }
 
     .details-card{
+
         padding:22px;
+
+        margin:20px 0;
+
+        border-radius:18px;
     }
 
-    .specs{
-        grid-template-columns:1fr;
+    .details-card h2{
+
+        font-size:21px;
     }
 
 }
-/* DJI MINI 3 - PREMIUM IMAGE */
-.drone-image img,
-img[src="mini3.jpg"]{
-    width:100%;
-    max-width:520px;
-    height:320px;
-    object-fit:contain;
 
-    display:block;
-    margin:0 auto;
 
-    border-radius:18px;
+/* SMALL PHONES */
 
-    filter:drop-shadow(0 12px 25px rgba(37,230,181,.18));
+@media(max-width:420px){
 
-    transition:transform .3s ease;
+    .logo{
+
+        font-size:16px;
+
+        letter-spacing:1.5px;
+    }
+
+    .drone-hero img{
+
+        height:260px;
+
+        padding:12px;
+    }
+
+    .drone-hero h1{
+
+        font-size:31px;
+
+        letter-spacing:1.5px;
+    }
+
+    .drone-hero p{
+
+        font-size:14px;
+    }
+
+    .details-card{
+
+        padding:19px;
+    }
+
+    .feature-list li{
+
+        font-size:14px;
+
+        padding:11px 12px;
+    }
+
 }
 
-.drone-image img:hover,
-img[src="mini3.jpg"]:hover{
-    transform:scale(1.03);
+
+/* REDUCE MOTION SUPPORT */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
+
     <div class="logo">
         ✦ LINGESH DRONE TECH
     </div>
+
 </header>
+
 
 <main class="container">
 
-    <!-- HERO -->
 
-    <section class="drone-hero">
+<!-- HERO -->
 
-        <img src="mini3.jpg" alt="DJI Mini 3">
+<section class="drone-hero">
 
-        <h1>DJI Mini 3</h1>
+    <img
+        src="avata.jpg"
+        alt="DJI Avata 360"
+    >
 
-        <p>
-            Compact sub-250g drone for aerial photography,
-            travel content and creative flying.
-        </p>
+    <h1>DJI Avata 360</h1>
 
-    </section>
+    <p>
+        360-degree camera drone designed to capture
+        immersive aerial videos.
+    </p>
 
-
-    <!-- DESCRIPTION -->
-
-    <section class="details-card">
-
-        <h2>DJI Mini 3</h2>
-
-        <p>
-            The DJI Mini 3 is a compact lightweight drone
-            designed for aerial photography, travel content
-            and creative flying.
-        </p>
-
-        <p>
-            Its lightweight design, vertical shooting capability
-            and long flight-time options make it suitable for
-            everyday aerial content creation.
-        </p>
-
-    </section>
+</section>
 
 
-    <!-- KEY SPECS -->
+<!-- ABOUT -->
 
-    <section class="details-card">
+<section class="details-card">
 
-        <h2>⚙️ Key Specs</h2>
+    <h2>### DJI Avata 360</h2>
 
-        <div class="specs">
+    <p>
+        <strong>DJI Avata 360</strong> is a
+        <strong>360-degree camera drone</strong>
+        designed to capture immersive aerial videos.
+    </p>
 
-            <div class="spec">
-                <strong>Weight</strong>
-                <span>248g</span>
-            </div>
+    <p>
+        Instead of recording only in one direction,
+        a 360° camera can capture the surroundings,
+        allowing you to choose the viewing angle later
+        while editing.
+    </p>
 
-            <div class="spec">
-                <strong>Camera</strong>
-                <span>1/1.3-inch CMOS</span>
-            </div>
-
-            <div class="spec">
-                <strong>Aperture</strong>
-                <span>f/1.7</span>
-            </div>
-
-            <div class="spec">
-                <strong>Photo</strong>
-                <span>12MP</span>
-            </div>
-
-            <div class="spec">
-                <strong>Video</strong>
-                <span>4K up to 30fps</span>
-            </div>
-
-            <div class="spec">
-                <strong>Flight Time</strong>
-                <span>Up to 38 min standard</span>
-            </div>
-
-            <div class="spec">
-                <strong>Wind Resistance</strong>
-                <span>10.7 m/s</span>
-            </div>
-
-            <div class="spec">
-                <strong>Transmission</strong>
-                <span>DJI O2</span>
-            </div>
-
-        </div>
-
-    </section>
+</section>
 
 
-    <!-- FEATURES -->
+<!-- KEY FEATURES -->
 
-    <section class="details-card">
+<section class="details-card">
 
-        <h2>🚁 Features</h2>
+    <h2>🚁 Key Features</h2>
 
-        <ul>
+    <ul class="feature-list">
 
-            <li>True Vertical Shooting</li>
+        <li>
+            🎥 360° panoramic video recording
+        </li>
 
-            <li>HDR support</li>
+        <li>
+            🚁 Compact and agile drone design
+        </li>
 
-            <li>Compact lightweight design</li>
+        <li>
+            🥽 FPV-style flying experience
+        </li>
 
-            <li>Suitable for travel photography</li>
+        <li>
+            📱 Suitable for immersive content
+            and social media
+        </li>
 
-            <li>Suitable for aerial videos</li>
+        <li>
+            🧠 Intelligent flight and
+            stabilization features
+        </li>
 
-            <li>Creative content and social media shooting</li>
+        <li>
+            🎬 Allows creative camera-angle
+            selection after recording
+        </li>
 
-        </ul>
+        <li>
+            🏔️ Useful for travel, adventure
+            and outdoor filming
+        </li>
 
-    </section>
+    </ul>
 
-
-    <!-- LIMITATIONS -->
-
-    <section class="details-card">
-
-        <h2>📌 Compared with Mini 3 Pro</h2>
-
-        <ul>
-
-            <li>No forward, side or rear obstacle sensing</li>
-
-            <li>No 48MP photo output</li>
-
-            <li>Uses DJI O2 transmission</li>
-
-        </ul>
-
-    </section>
+</section>
 
 
-    <!-- BACK -->
+<!-- USES -->
 
-    <section style="text-align:center; padding-bottom:50px;">
+<section class="details-card">
 
-        <a href="home.html" class="back-btn">
-            ← Back to My Drones
-        </a>
+    <h2>🎬 Uses</h2>
 
-    </section>
+    <ol class="uses-list">
+
+        <li>
+            Travel and adventure videos
+        </li>
+
+        <li>
+            360° aerial photography
+        </li>
+
+        <li>
+            Vlogging
+        </li>
+
+        <li>
+            Sports and action footage
+        </li>
+
+        <li>
+            Cinematic videos
+        </li>
+
+        <li>
+            Social-media content
+        </li>
+
+    </ol>
+
+</section>
+
+
+<!-- BACK BUTTON -->
+
+<section style="text-align:center;">
+
+    <a
+        href="home.html"
+        class="back-btn"
+    >
+        ← Back to My Drones
+    </a>
+
+</section>
+
 
 </main>
 
 </body>
+
 </html>
